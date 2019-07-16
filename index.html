@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title> Technical Documentation Page</title>
+</head>
+
+<body>
+
+    <!-- nav bar -->
+
+    <nav id="navbar">
+        <header>Git Documentation</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Git_Introduction">Git Introduction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Git_Installation">Git Installation</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Git_Basic">Git Basic</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Github_Sever">Github Sever</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Git_Remote">Git Remote</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Git_LifeCycle">Git LifeCycle</a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <!-- main -->
+    <main id="main-doc">
+
+        <!-- Introduction-->
+        <section class="main-section" id="Git_Introduction">
+            <header>Git Introduction</header>
+            <h2>What is Git?</h2>
+            <p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
+            <p>
+                Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+            </p>
+            <h2> Advantages of using Git?</h2>
+            <ul>
+                <li>Distributed Development</li>
+                <li>Easy to Learn</li>
+                <li>Branching and merging are easy</li>
+                <li>Workflow is flexible</li>
+                <li>Collaboration friendly</li>
+                <li>Any sort of projects can use GIT</li>
+            </ul>
+            <h2> Disadvantages of using Git?</h2>
+            <ul>
+                <li>Steep learning curve</li>
+                <li>Git is less preferred for handling extremely large files or frequently changing binary files</li>
+                <li>GIT does not support ‘commits’ across multiple branches or tags</li>
+                <li>Binary files are a big no</li>
+
+            </ul>
+            <h2>Basic workflow of Git</h2>
+            <ul>
+                <li><strong> Step 1</strong> − You modify a file from the working directory.</li>
+                <li><strong> Step 2</strong> − You add these files to the staging area.</li>
+                <li><strong> Step 3</strong>− You perform commit operation that moves the files from the staging area. After push operation, it stores the changes permanently to the Git repository.</li>
+            </ul>
+            <img src="https://www.tutorialspoint.com/git/images/staging_area.png" alt="Basic Git Worflow">
+            <hr>
+        </section>
+
+        <!-- Installation-->
+        <section class="main-section" id="Git_Installation">
+            <header>Git Installation</header>
+            <h2>Installing on macOS</h2>
+            <p>
+                There are several ways to install Git on a Mac. In fact, if you've installed XCode (or it's Command Line Tools), Git may already be installed. To find out, open a terminal and enter git --version.
+            </p>
+            <code>
+                <span>$ git --version </span> 
+                <span>git version 2.7.0 (Apple Git-66)</span> 
+            </code>
+            <p>
+                If you don’t have it installed already, it will prompt you to install it. If you want a more up to date version, you can also install it via a binary installer. A macOS Git installer is maintained and available for download at the Git website, at
+                <a href="https://git-scm.com/download/mac.">https://git-scm.com/download/mac.</a>
+            </p>
+            <h2>Install Git on Windows</h2>
+            <p>
+                There are also a few ways to install Git on Windows. The most official build is available for download on the Git website. Just go to <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>and the download will
+                start automatically. Note that this is a project called Git for Windows, which is separate from Git itself; for more information on it, go to <a href=" https://gitforwindows.org."> https://gitforwindows.org.</a>
+            </p>
+            <p>
+                After Installation, Open a Command Prompt (or Git Bash if during installation you elected not to use Git from the Windows Command Prompt). Run the following commands to configure your Git username and email using the following commands, replacing Emma's
+                name with your own. These details will be associated with any commits that you create:
+            </p>
+            <code>
+                <span>$ git config --global user.name "Emma Paris"</span>
+                <span> $ git config --global user.email "eparis@atlassian.com"</span>
+            </code>
+            <h2>Install Git on Linux</h2>
+            <p>Debian / Ubuntu (apt-get)</p>
+            <code>
+                <span>$ sudo apt-get update</span>
+                <span>$ sudo apt-get install git</span>
+            </code>
+            <p>Fedora (dnf/yum)</p>
+            <code>
+                <span>$ sudo dnf install git</span>
+            </code>
+            <p>or</p>
+            <code>
+                <span>$ sudo yum install git</span>
+            </code>
+            <hr>
+        </section>
+
+        <!-- Basic-->
+        <section class="main-section" id="Git_Basic">
+            <header>Git Basic</header>
+            <h2>git init</h2>
+            <p>This command is used to create a new GIT repository. Usage:</p>
+            <code>
+                <span>$ git init</span>
+            </code>
+            <h2>git status</h2>
+            <p>The git status command displays the list of changed files along with the files that are yet to be added or committed. Usage:</p>
+            <code>
+                <span>$ git status</span>
+            </code>
+            <h2>git add</h2>
+            <p>The git add command can be used in order to add files to the index. For example, the following command will add a file named temp.txt present in the local directory to the index:</p>
+            <code>
+                <span>$ git add temp.txt</span>
+            </code>
+            <h2>git commit</h2>
+            <p>The git commit command is used to commit the changes to the head. Note that any committed changes won’t make their way to the remote repository. Usage:</p>
+            <code>
+                <span>$ git commit –m “Message to go with the commit here”</span>
+            </code>
+            <h2>git remote</h2>
+            <p>The git remote command lets a user connect to a remote repository. The following command lists the remote repositories that are currently configured:</p>
+            <code>
+                <span>$ git remote –v</span>
+            </code>
+            <h2>git checkout</h2>
+            <p>The git checkout command can be used to create branches or to switch between them. For example, the following creates a new branch and switches to it:</p>
+            <code>
+                <span>$ git checkout name </span>
+            </code>
+            <h2>git branch</h2>
+            <p>The git branch command can be used to list, create or delete branches. To list all the branches present in the repository use:</p>
+            <code>
+                <span>$ git branch </span>
+            </code>
+            <p>To delete a branch:</p>
+            <code>
+                <span>$ git branch –d branch-name</span>
+            </code>
+            <h2>git merge</h2>
+            <p>The git merge command is used to merge a branch into the active branch. Usage:</p>
+            <code>
+                <span>$ git merge branch-name </span>
+            </code>
+            <h2>git reset</h2>
+            <p>To reset the index and the working directory to the last commit’s state, git reset command is used. Usage:</p>
+            <code>
+                <span>$ git reset --hard HEAD </span>
+            </code>
+            <h2>git tag</h2>
+            <p>Tagging is used to mark specific commits with simple handles. An example can be:</p>
+            <code>
+                <span>$ git tag 1.1.0 insert-commitID-here </span>
+            </code>
+            <hr>
+        </section>
+
+        <!-- github-->
+        <section class="main-section" id="Github_Sever">
+            <header>Github Sever</header>
+            <p>
+                GitHub is a code hosting platform for collaboration and version control.
+                <br> GitHub lets you (and others) work together on projects.
+                <br>Github is also called as Remote Sever.
+            </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWgfLsa8npTZTO22skpM-6-R2b3JxR554CVmX7LApZGbLz0YJ4Ng" alt="GitHub">
+            <h2>GitHub essentials are:</h2>
+            <ul>
+                <li>Repositories</li>
+                <li>Branches</li>
+                <li>Commits</li>
+                <li>Pull Requests</li>
+                <li>Git (the version control software GitHub is built on)</li>
+            </ul>
+            <hr>
+        </section>
+
+        <!-- remote -->
+        <section class="main-section" id="Git_Remote">
+            <header>Git Remote</header>
+            <h2>git clone</h2>
+            <p>The git clone command is used for repository checking out purposes. If the repository lies on a remote server, use:</p>
+            <code>
+                <span>$ git clone /path/to/repository </span>
+            </code>
+            <h2>git remote add origin</h2>
+            <p>If you haven't connected your local repository to a remote server, add the server to be able to push to it:</p>
+            <code>
+                <span>$ git remote add origin <server> </span>
+            </code>
+            <h2>git push</h2>
+            <p>git push is another one of the most used basic git commands. A simple push sends the made changes to the master branch of the remote repository associated with the working directory. For example:</p>
+            <code>
+                <span>$ git push origin master <server> </span>
+            </code>
+            <h2>git pull</h2>
+            <p>In order to merge all the changes present on the remote repository to the local working directory, the pull command is used. Usage:</p>
+            <code>
+                <span>$ git pull server </span>
+            </code>
+            <h2>git fetch</h2>
+            <p>git fetch allows a user to fetch all those objects from the remote repository that doesn’t currently reside in the local working directory. Example usage:</p>
+            <code>
+                <span>$ git fetch origin </span>
+            </code>
+            <hr>
+        </section>
+        <section class="main-section" id="Git_LifeCycle">
+            <header>Git LifeCycle</header>
+            <h2>General workflow is as follows −</h2>
+            <ul>
+                <li>You clone the Git repository as a working copy.</li>
+                <li>You modify the working copy by adding/editing files.</li>
+                <li>If necessary, you also update the working copy by taking other developer's changes.</li>
+                <li>You review the changes before commit.</li>
+                <li>You commit changes. If everything is fine, then you push the changes to the repository.</li>
+                <li>After committing, if you realize something is wrong, then you correct the last commit and push the changes to the repository.</li>
+            </ul>
+            <p>
+                Shown below is the pictorial representation of the work-flow.
+            </p>
+            <img src="https://www.tutorialspoint.com/git/images/life_cycle.png" alt="Life Cycle">
+        </section>
+    </main>
+
+</body>
+
+</html>
